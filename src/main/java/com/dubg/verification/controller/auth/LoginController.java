@@ -3,6 +3,8 @@ package com.dubg.verification.controller.auth;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.dubg.verification.request.auth.LoginRequest;
+import com.dubg.verification.response.auth.LoginResponse;
 import com.dubg.verification.service.auth.LoginService;
 
 @RestController
@@ -14,7 +16,7 @@ public final class LoginController {
 	}
 
 	@PostMapping("/auth/login")
-	public String login() {
-		throw new RuntimeException("Not Implements");
+	public LoginResponse login(final LoginRequest request) {
+		return this.loginService.execute(request);
 	}
 }
