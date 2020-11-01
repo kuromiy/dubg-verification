@@ -1,6 +1,7 @@
 package com.dubg.verification.controller.auth;
 
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.dubg.verification.request.auth.LoginRequest;
@@ -16,7 +17,7 @@ public final class LoginController {
 	}
 
 	@PostMapping("/auth/login")
-	public LoginResponse login(final LoginRequest request) {
+	public LoginResponse login(@RequestBody final LoginRequest request) {
 		return this.loginService.execute(request);
 	}
 }

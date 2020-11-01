@@ -1,5 +1,12 @@
 package com.dubg.verification.response.auth;
 
-public final class LoginResponse {
+import lombok.Data;
 
+@Data
+public final class LoginResponse {
+	private final String message;
+
+	public LoginResponse() {
+		this.message = "success";
+	}
 }

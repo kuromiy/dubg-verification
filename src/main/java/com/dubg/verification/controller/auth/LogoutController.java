@@ -16,6 +16,6 @@ public final class LogoutController {
 	@PostMapping("/auth/logout")
 	public String logout() {
 		this.logoutService.execute();
-		throw new RuntimeException("Not Implements");
+		return "success";
 	}
 }

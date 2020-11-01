@@ -13,6 +13,6 @@ public final class LogoutService {
 	}
 
 	public void execute() {
-		this.httpSession.removeAttribute("userId");
+		this.httpSession.invalidate();
 	}
 }
