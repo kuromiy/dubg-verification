@@ -24,7 +24,7 @@ public class WebConfig implements WebMvcConfigurer {
 		registry.addMapping("/**")
 				.allowedOrigins("http://localhost:3000")
 				.allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS", "HEAD", "PATCH")
-				.allowedHeaders("X-Requested-With", "Origin", "X-Csrftoken", "Content-Type", "Accept")
+				.allowedHeaders("X-Requested-With", "Origin", "X-Csrftoken", "Content-Type", "Accept", "Access-Control-Allow-Headers", "Access-Control-Allow-Origin")
 				// .allowedHeaders("X-Requested-With, Origin, X-Csrftoken, Content-Type, Accept")
 				.allowCredentials(true);
 	}
